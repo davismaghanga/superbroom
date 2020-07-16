@@ -19317,6 +19317,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/about.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/about.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/contactUs.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/contactUs.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/home.scss":
 /*!**********************************!*\
   !*** ./resources/sass/home.scss ***!
@@ -19328,15 +19350,29 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/services.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/services.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/home.scss ***!
-  \**************************************************************/
+/*!*********************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/home.scss ./resources/sass/about.scss ./resources/sass/services.scss ./resources/sass/contactUs.scss ***!
+  \*********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\superbroom\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\superbroom\resources\sass\home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! C:\xampp\htdocs\superbroom\resources\sass\home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! C:\xampp\htdocs\superbroom\resources\sass\about.scss */"./resources/sass/about.scss");
+__webpack_require__(/*! C:\xampp\htdocs\superbroom\resources\sass\services.scss */"./resources/sass/services.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\superbroom\resources\sass\contactUs.scss */"./resources/sass/contactUs.scss");
 
 
 /***/ })
