@@ -20,7 +20,7 @@ class CreateQuotationsTable extends Migration
             $table->string('location');
             $table->text('subject');
             $table->text('message_body');
-            $table->integer('advertisement_id');
+            $table->string('advertisement');
             $table->text('other_advertisement_method')->nullable();
             $table->timestamps();
         });

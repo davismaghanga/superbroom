@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-const tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,44 +11,5 @@ const tailwindcss = require('tailwindcss');
  |
  */
 
-/*
-    Compile sass for home page
- */
-
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/home.scss', 'public/css')
-    .options({
-        processCssUrls:false,
-        postCss:[tailwindcss('./tailwind.config.js')],
-    });
-
-/*
-    Compile sass for about page
- */
-
-mix.sass('resources/sass/about.scss','public/css')
-    .options({
-        processCssUrls:false,
-        postCss:[tailwindcss('./tailwind.config.js')],
-    });
-
-/*
-    Compile sass for services page
- */
-
-mix.sass('resources/sass/services.scss','public/css')
-    .options({
-        processCssUrls:false,
-        postCss:[tailwindcss('./tailwind.config.js')],
-    });
-
-/*
-    Compile sass for contacts page
- */
-
-
-mix.sass('resources/sass/contactUs.scss','public/css')
-    .options({
-        processCssUrls:false,
-        postCss:[tailwindcss('./tailwind.config.js')],
-    });
+    .sass('resources/sass/app.scss', 'public/css');

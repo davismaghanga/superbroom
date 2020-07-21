@@ -44,7 +44,7 @@
         </div>
     </header>
     <div class="section-header">
-        <img src="{{asset('images/yellow-modern.png')}}" class="yellow-modern" alt="superbroom">
+        <img src="{{asset('images/cropped-img.png')}}" class="yellow-modern" alt="superbroom">
         <div class="yellow-modern-text">
             <p>We offer quality and standard services</p>
         </div>
@@ -83,20 +83,20 @@
 
                 <form action="" method="post">
                     <div>
-                        <input type="text" name="full_name" value="" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name*">
+                        <input type="text" name="full_name" v-model="fullName"  class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name*">
                     </div>
 
                     <div>
-                        <input type="text" name="phone_number" value="" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Phone Number*">
+                        <input type="text" name="phone_number" v-model="phoneNumber"  class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Phone Number*">
                     </div>
                     <div>
-                        <input type="text" name="location" value="" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Location">
+                        <input type="text" name="location" v-model="location"  class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Location">
                     </div>
                     <div>
-                        <input type="text" name="subject" value="" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Subject">
+                        <input type="text" name="subject" v-model="subject"  class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Subject">
                     </div>
                     <div>
-                        <textarea name="message" id="message" cols="40" rows="10" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Message">
+                        <textarea name="message" id="message" v-model="message" cols="40" rows="10" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Message">
 
                         </textarea>
                     </div>
@@ -105,25 +105,25 @@
                         <label for="advertisement" class="text-xl" style="color:#6C6C6C">Where did you hear about us</label>
                         <div class="md:flex items-center justify-between mt-4">
                             <div>
-                                <input type="radio" id="mouth" name="advertisement" value="mouth">
+                                <input type="radio" id="mouth" name="advertisement" value="mouth" v-model="picked"  >
                                 <label for="mouth">Word of mouth</label><br>
-                                <input type="radio" id="website" name="advertisement" value="website">
+                                <input type="radio" id="website" name="advertisement" value="website" v-model="picked"   >
                                 <label for="website">Website</label><br>
-                                <input type="radio" id="social" name="advertisement" value="social">
+                                <input type="radio" id="social" name="advertisement" value="social" v-model="picked">
                                 <label for="social">Social Media</label>
                             </div>
                             <div>
-                                <input type="radio" id="referral" name="advertisement" value="referral">
+                                <input type="radio" id="referral" name="advertisement" value="referral" v-model="picked" >
                                 <label for="referral">Referral</label><br>
-                                <input type="radio" id="events" name="advertisement" value="events">
+                                <input type="radio" id="events" name="advertisement" value="events" v-model="picked">
                                 <label for="events">Events</label><br>
-                                <input type="radio" id="other" name="advertisement" value="other">
+                                <input type="radio" id="other" name="advertisement" value="other" v-model="picked">
                                 <label for="other">Other</label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded mb-24 cursor-pointer" style="background-color: #ED272B">
+                    <div v-on:click="requestQuotation()" class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded mb-24 cursor-pointer" style="background-color: #ED272B">
                         <div class="text-left pl-6 py-3">SEND</div>
                         <div class="pr-6 py-3">&#8594;</div>
                     </div>
@@ -132,31 +132,9 @@
             </div>
         </div>
     </div>
+    <!-- services ends-->
 
-
-
-    <!-- footer-->
-{{--    <div class="footer-container mr-10 ml-10">--}}
-{{--        <div class="footer-shell">--}}
-{{--            <div class="footer-message">--}}
-{{--                Leave us a message and we will be in touch shortly--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="footer-shell">--}}
-{{--            <div class="send-message-box">--}}
-{{--                <div class="box-text">Send message</div>--}}
-{{--                <span class="box-arrow">&#8594;</span>--}}
-{{--            </div>--}}
-{{--            <div class="social-media-icons mt-5">--}}
-{{--                <div class="ml-64">--}}
-{{--                    <i class="fa fa-twitter px-6" style="color: #224F86" aria-hidden="true"></i>--}}
-{{--                    <i class="fa fa-facebook px-6" style="color: #224F86" aria-hidden="true"></i>--}}
-{{--                    <i class="fa fa-instagram px-6" style="color:#224F86 " aria-hidden="true"></i>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
+    <!--footer -->
     <div class="container mx-auto md:flex items-center justify-center">
         <div class="mx-40 text-3xl py-3" style="color:#224F86">
             Leave us a message and we will be in touch shortly
@@ -180,8 +158,6 @@
 
         </div>
     </div>
-
-
     <hr class="home-divide-two mx-auto mb-12">
     <footer class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
         <div class="flex items-center justify-between px-16 py-2">
@@ -223,14 +199,99 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     const services = new Vue({
         el:'#services',
         data:function () {
             return{
                 isOpen:false,
+                fullName:null,
+                phoneNumber:null,
+                location:null,
+                subject:null,
+                message:null,
+                picked:null,
+                formData:new FormData()
             }
         },
+
+        methods:{
+            requestQuotation:function () {
+                const QuotationSwal = Swal.mixin({
+                    onClose:function () {
+                        window.location.reload()
+                    }
+                });
+
+                if(this.fullName && this.phoneNumber && this.location && this.subject && this.message && this.picked){
+                    this.formData.append('fullName',this.fullName);
+                    this.formData.append('phoneNumber',this.phoneNumber);
+                    this.formData.append('location',this.location);
+                    this.formData.append('subject',this.subject);
+                    this.formData.append('message',this.message);
+                    this.formData.append('advertisement',this.picked);
+
+                    //send formdata to server
+                    let content = this.formData;
+                    let uploadUrl = '{{url('quotation/post')}}';
+                    axios.post(uploadUrl,content)
+                        .then(response=>{
+                            // console.log(response)
+                            QuotationSwal.fire(
+                                'Sent!',
+                                'Quotation Submitted!',
+                                'success'
+                            );
+                            this.fullName = null;
+                            this.phoneNumber = null;
+                            this.location = null;
+                            this.subject = null;
+                            this.message = null;
+                            this.picked = null;
+
+                        })
+                        .catch(error=>{
+                            QuotationSwal.fire(
+                                'An error occurred',
+                                'Try Again!'
+                            )
+                            console.log(error);
+                            this.fullName = null;
+                            this.phoneNumber = null;
+                            this.location = null;
+                            this.subject = null;
+                            this.message = null;
+                            this.picked = null;
+
+                        })
+                }
+                else{
+                    if(!this.fullName){
+                        alert("Full Name required");
+                    }
+                    if(!this.phoneNumber){
+                        alert("Phone Number required");
+                    }
+                    if(!this.location){
+                        alert("Location required");
+                    }
+                    if(!this.subject){
+                        alert("Subject required");
+                    }
+                    if(!this.message){
+                        alert("Message required");
+                    }
+                    if(!this.picked){
+                        alert("Mode of advertisement required");
+                    }
+
+                }
+
+
+            }
+        }
     });
 </script>
 </body>

@@ -1,0 +1,63 @@
+$logo-colour:#3264A3;
+$title-colour:#224F86;
+
+html *{
+    font-family: 'Archivo',sans-serif;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/*Sub Header */
+.logo-colour{
+    color: $logo-colour;
+}
+.section-header{
+    min-height: 240px;
+    width: 100vw;
+    background: rgb(50,100,163);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color:white;
+}
+.yellow-modern{
+    object-fit: cover;
+    opacity:0.4;
+}
+.yellow-modern-text{
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*Upper part*/
+.upper{
+    background-color: #F6F8F9;
+}
+.services-title{
+    color:$title-colour ;
+}
+hr.contacts-divide{
+    width: 100%;
+    border: 1.5px solid #224F86;
+}
+
+li{
+    display:block;
+}
+
+input,textarea{
+    border-color:#707070;
+    border-style:solid;
+}
+.nav-colour{
+    color: #224F86;
+}
