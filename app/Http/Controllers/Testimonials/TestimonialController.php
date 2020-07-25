@@ -33,7 +33,7 @@ class TestimonialController extends Controller
         $testimonial->client_business_location = $request->client_business_location;
         $testimonial->client_testimonial = $request->client_testimonial;
         $testimonial->save();
-        return redirect('/superbroom/admin')->with('status','Testimonial Saved Successfully');
+        return redirect()->route('home')->with('status','Testimonial Saved Successfully');
     }
 
     public function editTestimonial(Testimonial $testimonial)

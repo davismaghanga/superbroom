@@ -31,7 +31,7 @@
                                 <td>{{$msg->email}}</td>
                                 <td>{{$msg->message_body}}</td>
                                 <td>
-                                    <a onclick="deleteMessage({{$msg->id}})">
+                                    <a style="cursor: pointer" onclick="deleteMessage({{$msg->id}})">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>

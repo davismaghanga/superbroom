@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Welcome</title>
     <!--Archivo font -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
     <header class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
         <div class="flex items-center justify-between px-16 py-2">
             {{-- left--}}
-            <div class="flex items-center">
+            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer">
                 <img src="{{asset('images/logo.png')}}" alt="superbroom">
                 <span class="logo-colour font-bold pl-4">SuperBroom</span>
             </div>
@@ -41,10 +41,10 @@
             </div>
         </div>
         <div :class="isOpen ? 'block' : 'hidden'" class="px-12 md:flex">
-            <a href="" class="px-4 block font-semibold rounded sm:ml-2 ">About</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Services</a>
+            <a href="{{url('about')}}" class="px-4 block font-semibold rounded sm:ml-2 ">About</a>
+            <a href="{{url('services')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Services</a>
             <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Blog</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
+            <a href="{{url('contacts')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
         </div>
     </header>
 
@@ -53,7 +53,7 @@
             <img src="{{asset('images/yellow-modern.png')}}" class="yellow-modern" alt="superbroom">
             <div class="yellow-modern-text">
                 <p>We offer Professional cleaning services</p>
-                <button class="know-more-btn">KNOW MORE</button>
+                <button class="know-more-btn" v-on:click="OpenServices">KNOW MORE</button>
             </div>
         </div>
         <!-- value -->
@@ -102,7 +102,7 @@
                         quality services
                     </p>
 
-                    <button class="services-btn mt-5">Our Services</button>
+                    <button class="services-btn mt-5" v-on:click="OpenServices">Our Services</button>
                 </div>
             </div>
 
@@ -121,7 +121,7 @@
                         that motivate and inspire occupants
                     </p>
 
-                    <button class="services-btn mt-5 mb-5">About Us</button>
+                    <button class="services-btn mt-5 mb-5" v-on:click="OpenAboutUs">About Us</button>
                 </div>
 
                 <div class="md:flex-shrink-0 px-8 mr-8 mb-16">
@@ -141,60 +141,25 @@
                 What the Clients say
             </h2>
             <div class="owl-carousel">
-                <div class="item mt-5 mb-3">
-                    <div class="client-testimony">
-                        <div class="client-testimony-text">
-                            SuperBroom Services has been our supplier since 2017
-                            and has satisfactorily performed to say the least. We
-                            would not hesitate to remommend them to any organization
-                            intending to deal with them in the field of cleaning and
-                            ground maintenance services
-                        </div>
-                        <div class="client-name mt-5">
-                            MRS. J A Kanjejo
-                        </div>
-                        <div class="client-pos-location">
-                            Procurement Manager, University of Nairobi
-                        </div>
 
-                    </div>
-                </div>
-                <div class="item mt-5 mb-3">
-                    <div class="client-testimony">
-                        <div class="client-testimony-text">
-                            SuperBroom Services has been our supplier since 2017
-                            and has satisfactorily performed to say the least. We
-                            would not hesitate to remommend them to any organization
-                            intending to deal with them in the field of cleaning and
-                            ground maintenance services
-                        </div>
-                        <div class="client-name mt-5">
-                            MRS. J A Kanjejo
-                        </div>
-                        <div class="client-pos-location">
-                            Procurement Manager, University of Nairobi
-                        </div>
+                @foreach($testimonials as $test)
+                    <div class="item mt-5 mb-3">
+                        <div class="client-testimony">
+                            <div class="client-testimony-text">
+                                {{$test->client_testimonial}}
+                            </div>
+                            <div class="client-name mt-5">
+                                {{$test->client_name}}
+                            </div>
+                            <div class="client-pos-location">
+                                {{$test->client_business_position}}, {{$test->client_business_location}}
+                            </div>
 
+                        </div>
                     </div>
-                </div>
-                <div class="item mt-5 mb-3">
-                    <div class="client-testimony">
-                        <div class="client-testimony-text">
-                            SuperBroom Services has been our supplier since 2017
-                            and has satisfactorily performed to say the least. We
-                            would not hesitate to remommend them to any organization
-                            intending to deal with them in the field of cleaning and
-                            ground maintenance services
-                        </div>
-                        <div class="client-name mt-5">
-                            MRS. J A Kanjejo
-                        </div>
-                        <div class="client-pos-location">
-                            Procurement Manager, University of Nairobi
-                        </div>
+                @endforeach
 
-                    </div>
-                </div>
+
             </div>
         </div>
         <hr class="home-divide mx-auto mb-12">
@@ -260,7 +225,7 @@
             Leave us a message and we will be in touch shortly
         </div>
         <div class="mx-40 w-2/5">
-            <div class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded cursor-pointer" style="background-color: #224F86">
+            <div v-on:click="openContacts" class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded cursor-pointer" style="background-color: #224F86">
                 <div class="text-left pl-6 py-3 font-thin">Send message</div>
                 <div class="pr-6 py-3">&#8594;</div>
             </div>
@@ -282,7 +247,7 @@
     <footer class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
         <div class="flex items-center justify-between px-16 py-2">
             {{-- left--}}
-            <div class="flex items-center">
+            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer">
                 <img src="{{asset('images/logo.png')}}" alt="superbroom">
                 <span class="logo-colour font-bold pl-4">SuperBroom</span>
             </div>
@@ -302,10 +267,10 @@
             </div>
         </div>
         <div :class="isOpen ? 'block' : 'hidden'" class="px-12 md:flex">
-            <a href="" class="px-4 block font-semibold rounded sm:ml-2 logo-colour">About</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Services</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Blog</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Contact</a>
+            <a href="{{url('about')}}" class="px-4 block font-semibold rounded sm:ml-2 logo-colour">About</a>
+            <a href="{{url('services')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Services</a>
+            <a href="#" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Blog</a>
+            <a href="{{url('contacts')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Contact</a>
 
         </div>
     </footer>
@@ -330,6 +295,20 @@
                 isOpen:false,
             }
         },
+        methods:{
+            OpenWelcome:function () {
+                window.location.href = "{{url('/')}}";
+            },
+            OpenAboutUs:function () {
+                window.location.href = "{{url('about')}}";
+            },
+            OpenServices:function () {
+                window.location.href = "{{url('services')}}";
+            },
+            openContacts:function () {
+                window.location.href = "{{url('contacts')}}";
+            }
+        }
     });
 </script>
 

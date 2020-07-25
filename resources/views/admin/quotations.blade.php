@@ -37,7 +37,7 @@
                                 <td>{{$quot->message_body}}</td>
                                 <td>{{$quot->advertisement}}</td>
                                 <td>
-                                    <a onclick="deleteQuotation({{$quot->id}})">
+                                    <a style="cursor: pointer" onclick="deleteQuotation({{$quot->id}})">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>

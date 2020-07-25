@@ -42,7 +42,7 @@
                                         <i class="fa fa-edit"></i>
                                     </a>
 
-                                    <a onclick="deleteTestimonial({{$test->id}})">
+                                    <a style="cursor: pointer" onclick="deleteTestimonial({{$test->id}})">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>

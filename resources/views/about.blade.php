@@ -18,7 +18,7 @@
     <header class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
         <div class="flex items-center justify-between px-16 py-2">
             {{-- left--}}
-            <div class="flex items-center">
+            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer">
                 <img src="{{asset('images/logo.png')}}" alt="superbroom">
                 <span class="logo-colour font-bold pl-4">SuperBroom</span>
             </div>
@@ -38,10 +38,10 @@
             </div>
         </div>
         <div :class="isOpen ? 'block' : 'hidden'" class="px-12 md:flex">
-            <a href="" class="px-4 block font-semibold rounded sm:ml-2 ">About</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Services</a>
+            <a href="{{url('about')}}" class="px-4 block font-semibold rounded sm:ml-2 ">About</a>
+            <a href="{{url('services')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Services</a>
             <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Blog</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
+            <a href="{{url('contacts')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
         </div>
     </header>
     <div class="section-header">
@@ -168,7 +168,7 @@
                 Leave us a message and we will be in touch shortly
             </div>
             <div class="mx-40 w-2/5">
-                <div class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded cursor-pointer" style="background-color: #224F86">
+                <div v-on:click="openContacts" class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded cursor-pointer" style="background-color: #224F86">
                     <div class="text-left pl-6 py-3 font-thin">Send message</div>
                     <div class="pr-6 py-3">&#8594;</div>
                 </div>
@@ -190,7 +190,7 @@
         <footer class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
             <div class="flex items-center justify-between px-16 py-2">
                 {{-- left--}}
-                <div class="flex items-center">
+                <div v-on:click="OpenWelcome"    class="flex items-center cursor-pointer">
                     <img src="{{asset('images/logo.png')}}" alt="superbroom">
                     <span class="logo-colour font-bold pl-4">SuperBroom</span>
                 </div>
@@ -210,10 +210,10 @@
                 </div>
             </div>
             <div :class="isOpen ? 'block' : 'hidden'" class="px-12 md:flex">
-                <a href="" class="px-4 block font-semibold rounded sm:ml-2 logo-colour">About</a>
-                <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Services</a>
-                <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Blog</a>
-                <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Contact</a>
+                <a href="{{url('about')}}" class="px-4 block font-semibold rounded sm:ml-2 logo-colour">About</a>
+                <a href="{{url('services')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Services</a>
+                <a href="#" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Blog</a>
+                <a href="{{url('contacts')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2 logo-colour">Contact</a>
 
             </div>
         </footer>
@@ -236,6 +236,20 @@
                 isOpen:false,
             }
         },
+        methods:{
+            OpenWelcome:function () {
+                window.location.href = "{{url('/')}}";
+            },
+            OpenAboutUs:function () {
+                window.location.href = "{{url('about')}}";
+            },
+            OpenServices:function () {
+                window.location.href = "{{url('services')}}";
+            },
+            openContacts:function () {
+                window.location.href = "{{url('contacts')}}";
+            }
+        }
     });
 </script>
 </body>

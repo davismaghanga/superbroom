@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+]);
 
 Route::middleware(['auth'])->group(function (){
     Route::get('/home', 'Testimonials\TestimonialController@index')->name('home');
-    Route::get('/superbroom/admin','Testimonials\TestimonialController@index');
     Route::get('/superbroom/admin/testimonial-form','Testimonials\TestimonialController@testimonialForm');
     Route::post('testimonial/post','Testimonials\TestimonialController@postTestimonial');
     Route::get('testimonial/edit/{testimonial}','Testimonials\TestimonialController@editTestimonial');
@@ -31,9 +34,7 @@ Route::middleware(['auth'])->group(function (){
     Route::post('quotation/delete/{quotation}','Quotations\QuotationController@deleteQuotation');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','FrontEndController@welcome');
 
 Route::get('/about',function (){
     return view('about');

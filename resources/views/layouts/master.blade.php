@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>SuperBroom Admin</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('admin/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
@@ -35,24 +35,35 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Home</a>
+            <a href="{{url('/')}}" class="nav-link">Welcome</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="{{url('about')}}" class="nav-link">About</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{url('services')}}" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{url('contacts')}}" class="nav-link">Contacts</a>
         </li>
     </ul>
 
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-        <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-    </form>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="{{url('/logout')}}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"
+            >
+                <i class="fa fa-power-off"></i>
+                <span>Logout</span>
+            </a>
+
+            <form id="logout-form" action="{{url('/logout')}}" method="POST" style="display: none;">
+                {{csrf_field()}}
+            </form>
+        </li>
+    </ul>
 
 
 </nav>
@@ -79,7 +90,7 @@
                      with font-awesome or any other icon font library -->
 
                 <li class="nav-item">
-                    <a href="{{url('superbroom/admin')}}" class="nav-link">
+                    <a href="{{route('home')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>Testimonials</p>
                     </a>
