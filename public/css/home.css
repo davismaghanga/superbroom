@@ -29,13 +29,12 @@ html, body {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.4;
+  width: 100%;
 }
 
 .yellow-modern-text {
   text-align: center;
   color: white;
-  font-size: 48px;
-  font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +44,6 @@ html, body {
 .know-more-btn {
   color: #3264A3;
   text-align: center;
-  font-size: 16px;
   background: #FFFFFF;
   border-radius: 32px;
   padding: 10px 20px;

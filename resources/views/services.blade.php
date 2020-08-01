@@ -15,15 +15,15 @@
 <div id="services">
     <!-- header-->
     <header class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
-        <div class="flex items-center justify-between px-16 py-2">
+        <div class="flex items-center justify-between py-2">
             {{-- left--}}
-            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer">
+            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer mr-16">
                 <img src="{{asset('images/logo.png')}}" alt="superbroom">
                 <span class="logo-colour font-bold pl-4">SuperBroom</span>
             </div>
 
             {{--right --}}
-            <div class="md:hidden">
+            <div class="md:hidden ml-16">
                 <button @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-black focus:outline-none">
                     <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
@@ -43,9 +43,9 @@
             <a href="{{url('contacts')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
         </div>
     </header>
-    <div class="section-header">
-        <img src="{{asset('images/cropped-img.png')}}" class="yellow-modern" alt="superbroom">
-        <div class="yellow-modern-text">
+    <div class="section-header flex">
+        <img src="{{asset('images/cropped-img.png')}}" class="yellow-modern flex-grow" alt="superbroom">
+        <div class="yellow-modern-text text-base font-bold md:text-5xl">
             <p>We offer quality and standard services</p>
         </div>
     </div>
@@ -56,7 +56,7 @@
         <div class="container mx-auto md:flex items-center justify-center ">
             <div class="px-40">
                 <h2 class="services-title text-3xl">Services</h2>
-                <ul class="flex flex-col bg-white">
+                <ul class="flex flex-col md:bg-white">
                     <li class="py-4 px-4 hover:bg-blue-300 cursor-pointer border-t-2 hover:border-blue-500">Office, Institutional and Industrial</li>
                     <li class="py-4 px-4 hover:bg-blue-300 cursor-pointer border-t-2 hover:border-blue-500">Gardening</li>
                     <li class="py-4 px-4 hover:bg-blue-300 cursor-pointer border-t-2 hover:border-blue-500">Sanitary Bins</li>
@@ -81,7 +81,7 @@
                     <h2 class="services-title text-xl">Get a free Quote</h2>
                 </div>
 
-                <form action="" method="post">
+                <form action="" method="post" class="w-full">
                     <div>
                         <input type="text" name="full_name" v-model="fullName"  class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name*">
                     </div>
@@ -160,15 +160,15 @@
     </div>
     <hr class="home-divide-two mx-auto mb-12">
     <footer class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
-        <div class="flex items-center justify-between px-16 py-2">
+        <div class="flex items-center justify-between py-2">
             {{-- left--}}
-            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer">
+            <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer mr-16">
                 <img src="{{asset('images/logo.png')}}" alt="superbroom">
                 <span class="logo-colour font-bold pl-4">SuperBroom</span>
             </div>
 
             {{--right --}}
-            <div class="md:hidden">
+            <div class="md:hidden ml-16">
                 <button @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-black focus:outline-none">
                     <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
