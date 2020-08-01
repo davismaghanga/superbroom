@@ -56,7 +56,7 @@
         <div class="container mx-auto md:flex items-center justify-center ">
             <div class="px-40">
                 <h2 class="services-title text-3xl">Services</h2>
-                <ul class="flex flex-col bg-white">
+                <ul class="flex flex-col md:bg-white">
                     <li class="py-4 px-4 hover:bg-blue-300 cursor-pointer border-t-2 hover:border-blue-500">Office, Institutional and Industrial</li>
                     <li class="py-4 px-4 hover:bg-blue-300 cursor-pointer border-t-2 hover:border-blue-500">Gardening</li>
                     <li class="py-4 px-4 hover:bg-blue-300 cursor-pointer border-t-2 hover:border-blue-500">Sanitary Bins</li>
@@ -81,7 +81,7 @@
                     <h2 class="services-title text-xl">Get a free Quote</h2>
                 </div>
 
-                <form action="" method="post">
+                <form action="" method="post" class="w-full">
                     <div>
                         <input type="text" name="full_name" v-model="fullName"  class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name*">
                     </div>

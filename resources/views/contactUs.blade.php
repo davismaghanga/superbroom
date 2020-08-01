@@ -67,7 +67,7 @@
                 </ul>
             </div>
             <div class="px-40 mt-10">
-                <form action="" method="post" novalidate="true">
+                <form action="" method="post">
                     <div>
                         <input type="text" name="full_name" v-model="fullName" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name*">
                     </div>
