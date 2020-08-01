@@ -46,7 +46,7 @@
     </header>
     <div class="section-header flex">
         <img src="{{asset('images/maid-cleans-contacts.png')}}" class="yellow-modern flex-grow" alt="superbroom">
-        <div class="yellow-modern-text">
+        <div class="yellow-modern-text text-base font-bold md:text-5xl">
             <p>
                 Contact Us today & know more about what we can do for you
             </p>
