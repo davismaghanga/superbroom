@@ -15,18 +15,18 @@
 
 <div id="contacts">
     <!-- header-->
-    <header class="px-16 py-4  md:flex md:justify-between md:items-center md:py-0">
+    <header :class="isOpen ? 'px-0 py-0':'px-10 py-2'" class="md:flex md:justify-between md:items-center md:py-0">
         <div class="flex items-center justify-between py-2">
             {{-- left--}}
             <div v-on:click="OpenWelcome" class="flex items-center cursor-pointer mr-16">
-                <img src="{{asset('images/logo.png')}}" alt="superbroom">
-                <span class="logo-colour font-bold pl-4">SuperBroom</span>
+                <img src="{{asset('images/logo.png')}}" class="h-16 w-16" alt="superbroom">
+                <span class="logo-colour font-bold">SuperBroom</span>
             </div>
 
             {{--right --}}
-            <div class="md:hidden ml-16">
-                <button @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-black focus:outline-none">
-                    <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div class="md:hidden ml-20">
+                <button @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-black focus:outline-none ">
+                    <svg class="fill-current h-6 w-6 logo-colour" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
                         <!--the x button -->
                         <path v-if="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
@@ -37,16 +37,16 @@
                 </button>
             </div>
         </div>
-        <div :class="isOpen ? 'block' : 'hidden'" class="px-12 md:flex">
-            <a href="{{url('about')}}" class="px-4 block font-semibold rounded sm:ml-2 ">About</a>
-            <a href="{{url('services')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Services</a>
-            <a href="" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Blog</a>
-            <a href="{{url('contacts')}}" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
+        <div :class="isOpen ? 'block bg-blue-800' : 'hidden'" class="px-12 md:flex">
+            <a href="{{url('about')}}" :class="isOpen ? 'text-white pt-3': 'text-black'" class="px-4  block font-semibold rounded sm:ml-2 ">About</a>
+            <a href="{{url('services')}}" :class="isOpen ? 'text-white pt-3': 'text-black'"  class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Services</a>
+            <a href=""   :class="isOpen ? 'text-white pt-3': 'text-black'" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Blog</a>
+            <a href="{{url('contacts')}}" :class="isOpen ? 'text-white pt-3 pb-5': 'text-black'" class="px-4 mt-1 block font-semibold rounded  md:mt-0 sm:ml-2">Contact</a>
         </div>
     </header>
     <div class="section-header flex">
         <img src="{{asset('images/maid-cleans-contacts.png')}}" class="yellow-modern flex-grow" alt="superbroom">
-        <div class="yellow-modern-text">
+        <div class="yellow-modern-text text-base font-bold md:text-5xl">
             <p>
                 Contact Us today & know more about what we can do for you
             </p>
@@ -56,8 +56,8 @@
 
     <!-- send message-->
     <div class="upper pt-5">
-        <div class="container mx-auto md:flex items-center justify-center ">
-            <div class="px-40">
+        <div class="container md:mx-auto md:flex md:items-center md:justify-center ">
+            <div class="px-12">
                 <h2 class="services-title text-3xl border-b border-blue-500">Send Message</h2>
                 <ul class="flex flex-col">
                     <li class="py-1 px-4 border-t-2">Phone No. 0722232402</li>
@@ -66,10 +66,10 @@
                     <li class="py-1 px-4">Uhuru Highway, Utalii House, 2nd flr Office N0. 232</li>
                 </ul>
             </div>
-            <div class="px-40 mt-10">
+            <div class="px-12 mt-10">
                 <form action="" method="post">
                     <div>
-                        <input type="text" name="full_name" v-model="fullName" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name*">
+                        <input type="text" name="full_name" v-model="fullName" class="border rounded-md py-3 px-3 mb-4 text-black placeholder-black w-full" placeholder="Full Name">
                     </div>
 
                     <div>
@@ -139,7 +139,7 @@
 
         </div>
     </footer>
-    <div class="flex items-end justify-end nav-colour text-xs mr-32">
+    <div class="flex items-end justify-end nav-colour text-xs mr-12 md:mr-32">
         2020@SUPERBROOMSERVICES LTD
     </div>
     <!--contacts footer ends -->
