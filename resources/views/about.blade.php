@@ -52,16 +52,16 @@
     </div>
     <!-- header ends-->
 
-    <section class="upper pb-16">
+    <section class="upper pb-16 pt-2">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl mt-8 about-title">
+            <h2 class="text-xl md:text-3xl mt-8 about-title">
                 About SuperBroom Services LTD
             </h2>
-            <p class="text-xl mt-5">
+            <p class="text-sm md:text-xl mt-5">
                 SuperBroom Services has been in operation for 20 years now. The company was <br>
                 registered as a sole proprietorship in 1999. After four years of steady growth, it was felt <br>
                 that it should be registered under private companies. The company has emerged as a <br>
-                real competitor in the cleaning and environment management business in Kenya
+                real competitor in the cleaning and environment management business in Kenya.
             </p>
         </div>
 
@@ -71,41 +71,32 @@
                 <img src="{{asset('images/woman-cleaning-sofa.png')}}" alt="woman-cleaning-sofa">
             </div>
 
-            <div class="px-8 ml-6">
-                <h2 class="text-left text-3xl technical-staff">
+            <div class="px-8 ml-2">
+                <h2 class="text-left text-xl md:text-3xl technical-staff">
                     Technical Staff
                 </h2>
 
-                <p class="text-left text-xl mt-5">
-                    Some of our staff in the recent past attended <br>
-                    training courses in Utalii College. We have <br>
-                    also deployed trained house keepers in our <br>
-                    organization which we believe will go a long <br>
-                    way to improve the standards of cleanliness <br>
-                    in the field. <br>
-                    We have well trained managerial staff who <br>
-                    have experience and skill required to lead <br>
-                    the organization to greater heights.
+                <p class="text-left text-sm md:text-xl mt-5">
+                    Some of our staff in the recent past attended training courses in Utalii College. We have
+                    also deployed trained house keepers in our organization which we believe will go a long
+                    way to improve the standards of cleanliness in the field. We have well trained managerial staff who
+                    have experience and skill required to lead the organization to greater heights.
                 </p>
             </div>
         </div>
 
         <div class="container mx-auto md:flex items-center justify-center mt-16 px-8">
 
-            <div class="px-8 ml-6">
-                <h2 class="text-left text-3xl technical-staff">
+            <div class="px-8 ml-2">
+                <h2 class="text-left text-xl md:text-3xl technical-staff">
                     Staff Training
                 </h2>
 
-                <p class="text-left text-xl mt-5">
-                    Some of our staff in the recent past attended <br>
-                    training courses in Utalii College. We have <br>
-                    also deployed trained house keepers in our <br>
-                    organization which we believe will go a long <br>
-                    way to improve the standards of cleanliness <br>
-                    in the field. <br>
-                    We have well trained managerial staff who <br>
-                    have experience and skill required to lead <br>  the organization to greater heights.
+                <p class="text-left text-sm md:text-xl mt-5">
+                    Some of our staff in the recent past attended training courses in Utalii College. We have
+                    also deployed trained house keepers in our organization which we believe will go a long
+                    way to improve the standards of cleanliness in the field. We have well trained managerial staff who
+                    have experience and skill required to lead the organization to greater heights.
                 </p>
 
             </div>
@@ -120,12 +111,12 @@
                 <img src="{{asset('images/woman-cleaning-sofa.png')}}" alt="woman-cleaning-sofa">
             </div>
 
-            <div class="px-8 ml-6">
-                <h2 class="text-left text-3xl technical-staff">
+            <div class="px-8 ml-2">
+                <h2 class="text-left text-xl md:text-3xl technical-staff">
                     Detergents
                 </h2>
 
-                <p class="text-left text-xl mt-5">
+                <p class="text-left text-sm md:text-xl mt-5">
                     Some of our staff in the recent past attended <br>
                     training courses in Utalii College. We have <br>
                     also deployed trained house keepers in our <br>
@@ -169,10 +160,10 @@
     <section class="lower">
         <!-- footer-->
         <div class="container md:mx-auto  md:flex md:items-center md:justify-center">
-            <div class="mx-24 text-2xl md:text-3xl py-3" style="color:#224F86">
+            <div class="mx-16 md:mx-24 text-2xl md:text-3xl py-3" style="color:#224F86">
                 Leave us a message and we will be in touch shortly
             </div>
-            <div class="mx-24 w-3/5">
+            <div class="mx-16 md:mx-24 w-3/5">
                 <div v-on:click="openContacts" class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded cursor-pointer" style="background-color: #224F86">
                     <div class="text-left pl-6 py-4 font-thin">Send message</div>
                     <div class="pr-6 py-4">&#8594;</div>

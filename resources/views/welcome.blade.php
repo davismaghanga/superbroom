@@ -58,7 +58,7 @@
         </div>
         <!-- value -->
         <div>
-            <h2 class="text-3xl text-center mt-8 value-text">We offer value for your money</h2>
+            <h2 class="text-2xl md:text-3xl text-center mt-8 value-text">We offer value for your money</h2>
 
             <div class="container mx-auto md:flex md:items-center md:justify-center py-4 mt-5">
                 <div class="flex items-center justify-center mt-5">
@@ -92,14 +92,12 @@
                     <img src="{{asset('images/woman-cleaning-sofa.png')}}" alt="woman-cleaning-sofa">
                 </div>
 
-                <div class="px-8 ml-6">
-                    <h2 class="text-left text-3xl affordable-text">
-                        Affordable and <br>
-                        professional are our <br>
-                        guiding principles
+                <div class="px-8 ml-2">
+                    <h2 class="text-left text-xl md:text-3xl affordable-text">
+                        Affordable and professional are our guiding principles
                     </h2>
 
-                    <p class="text-left text-2xl text-black mt-5">
+                    <p class="text-left text-xl text-black mt-5">
                         To provide quality service, our staff are trained and
                         vetted by the best in the cleaning business. <br>
                         We also use modern day technologies and methods to enable us offer
@@ -110,16 +108,16 @@
                 </div>
             </div>
 
-            <div class="container mx-auto md:flex items-center justify-center mt-16 px-8">
+            <div class="container mx-auto md:flex md:items-center md:justify-center mt-16 px-8">
 
-                <div class="px-8 ml-6">
-                    <h2 class="text-left text-3xl affordable-text">
+                <div class="px-8 ml-2">
+                    <h2 class="text-left text-xl md:text-3xl affordable-text">
                         20 years experience <br>
                         offering professional <br>
                         cleaning services
                     </h2>
 
-                    <p class="text-left text-2xl text-black mt-5">
+                    <p class="text-left text-xl text-black mt-5">
                         At SuperBroom Services Limited, we cost effectively
                         create lasting impressions by providing clean environments
                         that motivate and inspire occupants
@@ -141,7 +139,7 @@
     <!-- testimonials-->
     <section style="background: #FDFEFF">
         <div class="testimonials" style="background: #FDFEFF">
-            <h2 class="testimonial-title text-3xl text-center mt-16">
+            <h2 class="testimonial-title text-2xl md:text-3xl text-center mt-16">
                 What the Clients say
             </h2>
             <div class="owl-carousel">
@@ -197,7 +195,7 @@
 
     <!--Blog-->
     <section class="mt-12 pb-16" style="background: #F6F8F9" >
-        <h2 class="text-3xl text-black font-black text-center pt-10 pb-10">From our Blog</h2>
+        <h2 class="text-2xl md:text-3xl text-black font-black text-center pt-10 pb-10">From our Blog</h2>
         <div class="blog-container">
             <div class="blog-shell sm:mt-5">
                 <div class="blog-image">
@@ -231,10 +229,10 @@
 
     <!-- footer-->
     <div class="container md:mx-auto  md:flex md:items-center md:justify-center">
-        <div class="mx-24 text-2xl md:text-3xl py-3" style="color:#224F86">
+        <div class="mx-16 md:mx-24 text-2xl md:text-3xl py-3" style="color:#224F86">
             Leave us a message and we will be in touch shortly
         </div>
-        <div class="mx-24 w-3/5">
+        <div class="mx-16 md:mx-24 w-3/5">
             <div v-on:click="openContacts" class="flex flex-no-wrap items-center justify-between text-white mt-12 rounded cursor-pointer" style="background-color: #224F86">
                 <div class="text-left pl-6 py-4 font-thin">Send message</div>
                 <div class="pr-6 py-4">&#8594;</div>
